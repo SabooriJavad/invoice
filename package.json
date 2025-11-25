@@ -1,0 +1,21 @@
+{
+  "name": "faktura",
+  "version": "1.0.0",
+  "main": "invoice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "build": "cp *.html *.css *.js dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SabooriJavad/Invoice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SabooriJavad/Invoice/issues"
+  },
+  "homepage": "https://github.com/SabooriJavad/Invoice#readme",
+  "description": ""
+}
