@@ -176,24 +176,22 @@ button:hover {
 }
 
 @media screen and (max-width:600px) {
+  body {
+    background: #f7f8f8;
+  }
 
   #invoice {
     display: block;
     width: auto;
     background: #c2c6cd;
-    box-shadow: 0, 0, 0, 0.8 solid;
+    box-shadow: 5px 5px 8px rgb(174, 174, 225),
+      10px 10px 8px rgb(193, 209, 193),
+      15px 15px 8px gray;
     border-radius: 10px;
-    border-right: solid 0.1rem;
-    border-left: solid 0.1rem;
-    border-bottom: solid 0.1rem;
-    border-top: solid 0.1rem;
 
 
   }
 
-  body {
-    background: #f7f8f8;
-  }
 
   h1 input {
 
@@ -210,6 +208,21 @@ button:hover {
 
   }
 
+
+  .table-header {
+
+    padding: 0.6rem;
+    font-size: 0.4rem;
+    border-radius: 7px;
+  }
+
+  .product-row input {
+
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    border-radius: 7px;
+  }
+
   .container input {
     width: 70px;
     padding: 0.2px;
@@ -218,24 +231,38 @@ button:hover {
   #totals {
     width: 90px;
     padding: 0.2px;
-    font-size: x-small;
+    font-size: 0.5rem;
+    background: none;
   }
 
   #main {
-    width: 90px;
-    padding: 0.2px;
-    font-size: x-small;
     background: none;
+
+
+  }
+
+  #main input {
+
+    width: 60px;
+    font-size: 0.5rem;
+    border-radius: 5px;
+
   }
 
   footer {
     background: #c2c6cd;
   }
 
-  .button-group {
-    width: 150px;
-    padding: 0.2px;
-    font-size: 0.1rem;
-    border-radius: 8px;
+  #addProduktBtn,
+  #removeLastBtn,
+  #pdf {
+    display: flex;
+    width: 100px;
+    height: 2rem;
+    font-size: 0.6rem;
+    border-radius: 7px;
+    box-shadow: 5px 5px 8px rgb(174, 174, 225),
+      10px 10px 8px rgb(193, 209, 193),
+      15px 15px 8px gray;
   }
 }
