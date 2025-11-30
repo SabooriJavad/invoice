@@ -58,7 +58,7 @@ input {
   border-radius: 6px;
   border: none;
   background-color: rgb(235, 240, 240);
-  font-size: 0.6rem;
+  font-size: small;
 }
 
 /* FÖRFALLODAG MARKERING */
@@ -236,6 +236,7 @@ button:hover {
   .container input {
     width: 60px;
     padding: 0.1px;
+    font-size: 0.5rem;
   }
 
   #totals {
