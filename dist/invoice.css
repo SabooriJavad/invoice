@@ -58,7 +58,7 @@ input {
   border-radius: 6px;
   border: none;
   background-color: rgb(235, 240, 240);
-  font-size: small;
+  font-size: 0.6rem;
 }
 
 /* FÖRFALLODAG MARKERING */
