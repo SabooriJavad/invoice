@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "main": "invoice.js",
 "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  
-  "build": "mkdir -p dist2 && cp dist/* dist2/"
-
-
+  "build": "echo 'Build complete'"
 }
 ,
   "repository": {
