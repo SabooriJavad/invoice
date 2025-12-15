@@ -1,6 +1,5 @@
 body {
 
-
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   padding: 20px;
@@ -177,7 +176,31 @@ button:hover {
 
 @media screen and (max-width:600px) {
   body {
-    background: #f7f8f8;
+    background:
+      
+        radial-gradient(
+            circle,
+            rgba(255, 215, 0, 0.7) 0%,
+            rgba(255, 215, 0, 0.7) 20%,
+            transparent 40%
+        ) center/700px 700px no-repeat,
+
+    
+         center/180px 180px no-repeat,
+
+      
+        linear-gradient(
+            to bottom,
+            #246d6e 0%,
+           
+            #629797 39%,
+            #3b5f84 66%,
+           
+            #3f973f 100%
+        );
+         background-size:
+        100% 100%,   
+        180px 180px; 
 
 
   }
@@ -210,7 +233,7 @@ button:hover {
   }
 
   .container {
-    font-size: xx-small;
+    font-size: 6px;
     margin: 0;
 
   }
@@ -264,10 +287,11 @@ button:hover {
   #addProduktBtn,
   #removeLastBtn,
   #pdf {
-
-    width: auto;
+display: grid;
+grid-template-columns: column;
+    width:100px;
     height: 2rem;
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     border-radius: 7px;
     box-shadow: 5px 5px 8px rgb(174, 174, 225),
       10px 10px 8px rgb(193, 209, 193),
