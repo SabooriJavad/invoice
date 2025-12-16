@@ -1,27 +1,9 @@
 body {
-
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   padding: 20px;
   background: rgb(208, 211, 211);
 
-}
-
-#invoice {
-  display: grid;
-  width: 720px;
-  height: auto;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-h1 input {
-  border: none;
-  background: whitesmoke;
-  padding: 20px;
 }
 
 /* Titel FAKTURA */
@@ -33,268 +15,24 @@ h2 {
 }
 
 /* FAKTURA-INFO (kundnr, datum, osv.) */
-.container {
-
-  width: 90%;
+.invoice-details-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
   padding: 15px;
-  border-radius: 8px;
-}
-
-input {
-  max-width: 100%;
-}
-
-.container label {
-  font-weight: bold;
-}
-
-.container input {
-  color: #000;
-  padding: 8px;
-  border-radius: 6px;
-  border: none;
-  background-color: rgb(235, 240, 240);
-  font-size: small;
 }
 
 /* FÖRFALLODAG MARKERING */
 #Förfallodatum {
-
   color: rgb(239, 6, 6);
   font-weight: bold;
 }
 
-/* PRODUKT-TABELL */
-.table-header,
-.product-row {
-  display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
-  gap: 6px;
-  align-items: center;
-  width: 97%;
-}
-
-
-.table-header {
-  background: #dadada;
-  padding: 10px;
-  font-weight: bold;
-  border-radius: 6px;
-}
-
-.product-row input {
-  width: 100%;
-  padding: 8px;
-  border: none;
-  background: rgb(235, 240, 240);
-  border-radius: 6px;
-}
-
-/* KNAPP: LÄGG TILL PRODUKT */
-#addProductBtn {
-  margin-top: 20px;
-  padding: 10px 15px;
-  background: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#addProductBtn:hover {
-  background: #1d7f34;
-}
-
-/* TOTALER */
-#totals {
-  margin-top: 20px;
-  padding: 15px;
-  background: rgb(199, 211, 211);
-  border-radius: 8px;
-  width: 250px;
-  margin-left: auto;
-  font-size: 18px;
-}
-
-/* FOOTER */
-footer {
-
-  background-color: rgb(237, 239, 239);
-
-}
-
-
-#main {
-
-
-  background: rgb(197, 210, 210);
-  border-radius: 8px;
-  width: 150px;
-  padding: 10px;
-  margin-top: 20px;
-
-}
-
-#main input {
-  border: none;
-  background: whitesmoke;
-}
-
-.button-group {
-
-  display: grid;
-  width: 200px;
-
-
-}
-
-.button-group button {
-  padding: 10px 15px;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-}
-
 button {
-  margin-top: 15px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 16px;
   padding: 12px 20px;
   background: rgb(193, 193, 199);
   color: rgb(57, 55, 55);
-  font-size: 16px;
-  border-radius: 4px;
-
   cursor: pointer;
-}
-
-button:hover {
-  background: #005acc;
-  color: white;
-}
-
-@media screen and (max-width:600px) {
-  body {
-    background:
-      
-        radial-gradient(
-            circle,
-            rgba(255, 215, 0, 0.7) 0%,
-            rgba(255, 215, 0, 0.7) 20%,
-            transparent 40%
-        ) center/700px 700px no-repeat,
-
-    
-         center/180px 180px no-repeat,
-
-      
-        linear-gradient(
-            to bottom,
-            #246d6e 0%,
-           
-            #629797 39%,
-            #3b5f84 66%,
-           
-            #3f973f 100%
-        );
-         background-size:
-        100% 100%,   
-        180px 180px; 
-
-
-  }
-
-  #invoice {
-
-    width: auto;
-
-    background: #c2c6cd;
-    box-shadow: 5px 5px 8px rgb(174, 174, 225),
-      10px 10px 8px rgb(193, 209, 193),
-      15px 15px 8px gray;
-    border-radius: 10px;
-
-
-  }
-
-
-  h1 input {
-
-    width: 70px;
-    padding: 0.6rem;
-    font-size: 0.4rem;
-    border-radius: 7px;
-
-  }
-
-  h2 {
-    font-size: 0.9rem;
-  }
-
-  .container {
-    font-size: 6px;
-    margin: 0;
-
-  }
-
-
-  .table-header {
-
-    padding: 0.6rem;
-    font-size: 0.4rem;
-    border-radius: 7px;
-  }
-
-  .product-row input {
-
-    padding: 0.5rem;
-    font-size: 0.5rem;
-    border-radius: 7px;
-  }
-
-  .container input {
-    width: 60px;
-    padding: 0.1px;
-    font-size: 0.5rem;
-  }
-
-  #totals {
-    width: 90px;
-    padding: 0.2px;
-    font-size: 0.5rem;
-    background: none;
-  }
-
-  #main {
-    background: none;
-
-
-  }
-
-  #main input {
-
-    width: 60px;
-    font-size: 0.5rem;
-    border-radius: 5px;
-
-  }
-
-  footer {
-    background: #c2c6cd;
-  }
-
-  #addProduktBtn,
-  #removeLastBtn,
-  #pdf {
-display: grid;
-grid-template-columns: column;
-    width:100px;
-    height: 2rem;
-    font-size: 0.5rem;
-    border-radius: 7px;
-    box-shadow: 5px 5px 8px rgb(174, 174, 225),
-      10px 10px 8px rgb(193, 209, 193),
-      15px 15px 8px gray;
-  }
 }
