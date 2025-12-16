@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
@@ -6,58 +6,59 @@
     <title>Faktura</title>
     <link rel="stylesheet" href="invoice.css" />
     <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-FQSEERJTFW');
-</script>
+      gtag("config", "G-FQSEERJTFW");
+    </script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6069439412084579"
-     crossorigin="anonymous"></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6069439412084579"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <div id="invoice">
       <h1>
-        <input type="text">
+        <input type="text" />
       </h1>
       <h2>Faktura</h2>
 
       <!-- Fakturainformation -->
       <div class="container">
-
         <label for="fakturanr">Fakturanr</label>
         <input type="number" id="fakturanr" />
 
-      <label for="meddelande">Kundinfo</label>
+        <label for="meddelande">Kundinfo</label>
         <input type="text" id="meddelande" />
-
 
         <label for="Datum">Datum</label>
         <input type="date" id="Datum" />
 
-   <label for="kundnr">Kundnr</label>
+        <label for="kundnr">Kundnr</label>
         <input type="number" id="kundnr" />
-       
 
-              <label for="betalning">Betalningsvillkor</label>
+        <label for="betalning">Betalningsvillkor</label>
         <input type="text" id="betalning" />
-  
 
         <label for="text">Organisationsnummer</label>
         <input type="text" id="text" />
 
-      
-
         <label for="Förfallodatum">Förfallodatum</label>
         <input type="date" id="Förfallodatum" class="Förfallodatum" />
 
-          <label for="text">Adress</label>
+        <label for="text">Adress</label>
         <input type="text" id="text" />
-        
       </div>
 
       <!-- Produkttabell -->
@@ -70,19 +71,19 @@
       </div>
 
       <div id="productList"></div>
-<template id="productTemplate">
-  <div class="product-row">
-    <input type="text" placeholder="Bakverk / Produkt">
-    <input type="number" value="12" min="0">
-    <input type="number" value="1" min="0">
-    <input type="number" value="50" min="0">
-    <input type="number" readonly>
-  </div>
-</template>
-
-<hr>
-      <!-- Summering -->
-        <footer>
+      <template id="productTemplate">
+        <div class="product-row">
+          <input type="text" placeholder="Bakverk / Produkt" />
+          <input type="number" value="12" min="0" />
+          <input type="number" value="1" min="0" />
+          <input type="number" value="50" min="0" />
+          <input type="number" readonly />
+        </div>
+      </template>
+    </div>
+    <hr />
+    <!-- Summering -->
+    <footer>
       <div id="totals">
         <p>Moms total: <span id="momsTotal">0</span> kr</p>
         <p>
@@ -90,18 +91,20 @@
         </p>
       </div>
       <p id="main">
-       <input type="text" placeholder="Företag"> <br /><br>
-     <input type="text" placeholder="Bankgiro "> <br><br>
-       <input type="number" placeholder="Tel"><br>
-      
+        <input type="text" placeholder="Företag" /> <br /><br />
+        <input type="text" placeholder="Bankgiro " /> <br /><br />
+        <input type="number" placeholder="Tel" /><br />
       </p>
-    </div>
 
-       <div class="button-group">
-  <button id="addProduktBtn" onclick="addProduct()">Lägg till produkt</button>
-  <button id="removeLastBtn" onclick="removeLastProduct()">Ta bort sista produkt</button> 
-  <button onclick="downloadPDF()" id="pdf">Ladda ner PDF</button>
-</div>
+      <div class="button-group">
+        <button id="addProduktBtn" onclick="addProduct()">
+          Lägg till produkt
+        </button>
+        <button id="removeLastBtn" onclick="removeLastProduct()">
+          Ta bort sista produkt
+        </button>
+        <button onclick="downloadPDF()" id="pdf">Ladda ner PDF</button>
+      </div>
     </footer>
 
     <!-- JS -->
