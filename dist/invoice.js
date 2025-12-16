@@ -1,3 +1,4 @@
+// Lägg till produkter 
 function addProduct() {
   const template = document.getElementById("productTemplate");
   const row = template.content.cloneNode(true).querySelector(".product-row");
@@ -55,7 +56,10 @@ function removeLastProduct() {
 }
 
 // PDF-funktion
+// Förbereda filen inför nedladdning
+// Ta bort alla element som inte ska vara med 
 function downloadPDF() {
+  // Ta bort knappar och annat
   const element = document.getElementById("invoice");
 
   const opt = {

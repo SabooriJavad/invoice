@@ -16,10 +16,8 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-FQSEERJTFW");
     </script>
-
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6069439412084579"
@@ -29,73 +27,117 @@
 
   <body>
     <div id="invoice">
-      <h1>
-        <input type="text" />
-      </h1>
       <h2>Faktura</h2>
 
-      <!-- Fakturainformation -->
-      <div class="container">
-        <label for="fakturanr">Fakturanr</label>
-        <input type="number" id="fakturanr" />
-
-        <label for="meddelande">Kundinfo</label>
-        <input type="text" id="meddelande" />
-
-        <label for="Datum">Datum</label>
-        <input type="date" id="Datum" />
-
-        <label for="kundnr">Kundnr</label>
-        <input type="number" id="kundnr" />
-
-        <label for="betalning">Betalningsvillkor</label>
-        <input type="text" id="betalning" />
-
-        <label for="text">Organisationsnummer</label>
-        <input type="text" id="text" />
-
-        <label for="Förfallodatum">Förfallodatum</label>
-        <input type="date" id="Förfallodatum" class="Förfallodatum" />
-
-        <label for="text">Adress</label>
-        <input type="text" id="text" />
-      </div>
-
-      <!-- Produkttabell -->
-      <div class="table-header">
-        <div>Produkt</div>
-        <div>Moms %</div>
-        <div>Kvantitet (kg/st)</div>
-        <div>Á-pris (kr)</div>
-        <div>Total (kr)</div>
-      </div>
-
-      <div id="productList"></div>
-      <template id="productTemplate">
-        <div class="product-row">
-          <input type="text" placeholder="Bakverk / Produkt" />
-          <input type="number" value="12" min="0" />
-          <input type="number" value="1" min="0" />
-          <input type="number" value="50" min="0" />
-          <input type="number" readonly />
+      <!-- Företagsuppgifter  -->
+      <div>
+        <div>
+          <label for="">Företagsnamn</label>
+          <input type="text" name="" id="" />
         </div>
-      </template>
-    </div>
-    <hr />
-    <!-- Summering -->
-    <footer>
-      <div id="totals">
-        <p>Moms total: <span id="momsTotal">0</span> kr</p>
-        <p>
-          <b>Att betala: <span id="grandTotal">0</span> kr</b>
-        </p>
+        <div>
+          <label for="">Företagsadress</label>
+          <input type="text" name="" id="" />
+        </div>
+        <div>
+          <label for="">Mejladress</label>
+          <input type="text" name="" id="" />
+        </div>
+        <div>
+          <label for="">Telefonnummer</label>
+          <input type="text" name="" id="" />
+        </div>
       </div>
-      <p id="main">
-        <input type="text" placeholder="Företag" /> <br /><br />
-        <input type="text" placeholder="Bankgiro " /> <br /><br />
-        <input type="number" placeholder="Tel" /><br />
-      </p>
 
+      <!-- Fakturainformation -->
+      <div class="invoice-details-container">
+        <div id="invoice-information">
+          <div>
+            <label for="">Fakturanummer</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Fakturadatum</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Betalningsvillkor</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Förfallodatum</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Dröjsmålsränta</label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
+
+      <!-- Kunduppgifter -->
+        <div id="client-information">
+          <div>
+            <label for="">Företag</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Adress</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Org. nr.</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Momsreg. nr.</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Referens</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">E-post</label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Produktrader -->
+      <table>
+        <tr>
+          <th>Beskrivning</th>
+          <th>Datum</th>
+          <th>Antal</th>
+          <th>Enhet</th>
+          <th>À-pris</th>
+          <th>Moms %</th>
+          <th>Belopp</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" value="Produkt" />
+          </td>
+          <td>
+            <input type="text" value="2025" />
+          </td>
+          <td>
+            <input type="text" value="2" />
+          </td>
+          <td>
+            <input type="text" value="st" />
+          </td>
+          <td>
+            <input type="text" value="50kr" />
+          </td>
+          <td>
+            <input type="text" value="25" />
+          </td>
+          <td>
+            <input type="text" value="100kr" />
+          </td>
+        </tr>
+      </table>
       <div class="button-group">
         <button id="addProduktBtn" onclick="addProduct()">
           Lägg till produkt
@@ -103,10 +145,99 @@
         <button id="removeLastBtn" onclick="removeLastProduct()">
           Ta bort sista produkt
         </button>
-        <button onclick="downloadPDF()" id="pdf">Ladda ner PDF</button>
       </div>
-    </footer>
+      <hr />
+      <!-- Summering -->
+      <div>
+        <div>
+          <label for="">Totalt exkl. moms</label>
+          <input type="text" name="" id="" />
+        </div>
+        <div>
+          <label for="">Moms 25%</label>
+          <input type="text" name="" id="" />
+        </div>
+        <div>
+          <label for="">Summa att betala</label>
+          <input type="text" name="" id="" />
+        </div>
+      </div>
 
+      <hr />
+
+      <!-- Företags och betalningsinformation -->
+      <div style="display: flex">
+        <div>
+          <p>Företagsuppgifter</p>
+          <div>
+            <label for="">Företagsnamn</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Adress</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Org. nr.</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Momsreg. nr.</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Godkänd för F-skatt</label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
+        <div>
+          <p>Kontaktuppgifter</p>
+          <div>
+            <label for="">Företagsnamn</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Telefonnummer</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">E-post</label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
+        <div>
+          <p>Betalningsuppgifter</p>
+          <div>
+            <label for="">Bank</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Ägare av bankkonto</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Kontonr.</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">SWIFT/BIC</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">IBAN</label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="">Swish</label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <div class="button-group">
+      <button onclick="downloadPDF()" id="pdf">Ladda ner PDF</button>
+    </div>
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="invoice.js"></script>
